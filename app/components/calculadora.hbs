@@ -1,0 +1,17 @@
+<!-- app/templates/calculator.hbs -->
+<div class="calculadora">
+  <!-- En este apartado se le da el typo numero al input el valor se le asignara a la propiedad num1 
+  posteriormente una vez que se alla dejsado este campo el valor se actualizara-->
+  <input type="number" value={{this.num1}} {{on "input" this.actualizarnum1}}>
+  <input type="number" value={{this.num2}} {{on "input" this.actualizarnum2}}>
+
+  <!-- Se cran botones con el listener de click llamando a su funcion correspondiente -->
+  <button {{on "click" this.sumar}}>Sumar</button>
+  <button {{on "click" this.restar}}>Restar</button>
+  <button {{on "click" this.multiplicacion}}>Multiplicacion</button>
+  <button {{on "click" this.division}}>Divicion</button>
+
+  <!-- En este apartado se actualizara el resultado haciendo referencia a la propiedad resultado -->
+  <p>Resultado: {{ this.resultado}}</p>
+</div>
+
